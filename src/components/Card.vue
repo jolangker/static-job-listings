@@ -17,7 +17,7 @@
         <p v-if="featured" class="pill-vdg-cyan ml-2">FEATURED</p>
       </div>
       <p class="font-bold text-lg cursor-pointer hover:text-primary">
-        {{ job.role }}
+        {{ job.position }}
       </p>
       <div class="py-2 text-dg-cyan space-x-2">
         <span>{{ job.postedAt }}</span>
@@ -29,9 +29,9 @@
     </div>
     <div class="flex flex-wrap lg:ml-auto">
       <Tag
-        v-for="tech in job.techs"
-        :key="tech"
-        :text="tech"
+        v-for="requirement in job.requirements"
+        :key="requirement"
+        :text="requirement"
         class="mr-4 mt-4"
         @select="selectTag"
       />

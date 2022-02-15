@@ -32,7 +32,7 @@
       :newest="job.new"
       :featured="job.featured"
       @select-tag="addCategory"
-    ></Card>
+    />
   </main>
 </template>
 
@@ -49,7 +49,7 @@ const getLogoCompany = (logo) => {
 const jobs = computed(() =>
   json.map((j) => {
     j.logo = getLogoCompany(j.logo);
-    j.techs = j.languages.concat(j.tools);
+    j.requirements = [j.role, j.level, ...j.languages, ...j.tools];
     return j;
   })
 );
@@ -73,7 +73,7 @@ const clearCategories = () => {
 
 const filteredJobs = computed(() => {
   return jobs.value.filter((job) => {
-    return categories.some((cat) => job.techs.includes(cat));
+    return categories.every((cat) => job.requirements.includes(cat));
   });
 });
 </script>
