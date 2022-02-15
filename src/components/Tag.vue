@@ -1,13 +1,17 @@
 <template>
-  <div class="tag-primary overflow-hidden flex">
+  <div class="overflow-hidden flex">
     <button
       @click="handleSelect"
-      class="font-bold py-1 px-2"
+      class="tag-primary px-2 py-1"
       :class="{ 'pointer-events-none': removeable }"
     >
       {{ text }}
     </button>
-    <button v-if="removeable" class="bg-primary p-2" @click="handleRemove">
+    <button
+      v-if="removeable"
+      class="bg-primary p-2 duration-300 hover:bg-vdg-cyan"
+      @click="handleRemove"
+    >
       <img src="../assets/images/icon-remove.svg" />
     </button>
   </div>

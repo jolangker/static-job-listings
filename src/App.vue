@@ -18,7 +18,7 @@
       </div>
       <div>
         <button
-          class="font-bold text-dg-cyan px-4 mt-4"
+          class="font-bold text-dg-cyan px-4 mt-4 duration-300 hover:(text-primary underline underline-primary underline-offset-2)"
           @click="clearCategories"
         >
           Clear

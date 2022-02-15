@@ -23,7 +23,8 @@ export default defineConfig({
     pill: "px-2 py-2px rounded-full font-bold text-sm",
     "pill-primary": "pill bg-primary text-white",
     "pill-vdg-cyan": "pill bg-vdg-cyan text-white",
-    tag: "font-bold rounded",
-    "tag-primary": "tag bg-lg-cyan-2 text-primary",
+    tag: "font-bold rounded duration-300",
+    "tag-primary":
+      "tag bg-lg-cyan-2 text-primary hover:(bg-primary text-lg-cyan-2)",
   },
 });

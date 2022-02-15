@@ -10,11 +10,15 @@
     <img :src="job.logo" class="<lg:hidden mr-6" />
     <div class="border-b-2 pb-3 lg:(border-0 p-0)">
       <div class="flex items-center py-3">
-        <p class="text-primary font-bold mr-3">{{ job.company }}</p>
+        <p class="text-primary font-bold mr-3">
+          {{ job.company }}
+        </p>
         <p v-if="newest" class="pill-primary">NEW!</p>
         <p v-if="featured" class="pill-vdg-cyan ml-2">FEATURED</p>
       </div>
-      <p class="font-bold text-lg">{{ job.role }}</p>
+      <p class="font-bold text-lg cursor-pointer hover:text-primary">
+        {{ job.role }}
+      </p>
       <div class="py-2 text-dg-cyan space-x-2">
         <span>{{ job.postedAt }}</span>
         <span>&#8226;</span>
