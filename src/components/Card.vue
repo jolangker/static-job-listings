@@ -1,6 +1,6 @@
 <template>
   <div
-    class="p-4 bg-white rounded-lg filter drop-shadow-lg border-l-8 border-primary lg:(flex items-center px-8 border-l-4 rounded)"
+    class="card border-l-8 border-primary lg:(flex items-center px-8 border-l-4 rounded)"
     :class="{ 'border-l-0 lg:border-l-0': !featured }"
   >
     <img
@@ -24,15 +24,20 @@
       </div>
     </div>
     <div class="flex flex-wrap lg:ml-auto">
-      <p v-for="lang in techs" :key="lang" class="mt-4 mr-4 tag-primary">
-        {{ lang }}
-      </p>
+      <Tag
+        v-for="tech in job.techs"
+        :key="tech"
+        :text="tech"
+        class="mr-4 mt-4"
+        @select="selectTag"
+      />
     </div>
   </div>
 </template>
 
 <script setup>
 import { computed } from "@vue/runtime-core";
+import Tag from "../components/Tag.vue";
 
 const props = defineProps({
   job: Object,
@@ -40,5 +45,9 @@ const props = defineProps({
   featured: Boolean,
 });
 
-const techs = computed(() => props.job.languages.concat(props.job.tools));
+const emits = defineEmits(["select-tag"]);
+
+const selectTag = (val) => {
+  emits("select-tag", val);
+};
 </script>

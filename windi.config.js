@@ -19,10 +19,11 @@ export default defineConfig({
     },
   },
   shortcuts: {
+    card: "p-4 bg-white rounded-lg filter drop-shadow-lg",
     pill: "px-2 py-2px rounded-full font-bold text-sm",
     "pill-primary": "pill bg-primary text-white",
     "pill-vdg-cyan": "pill bg-vdg-cyan text-white",
-    tag: "py-1 px-2 font-bold rounded",
+    tag: "font-bold rounded",
     "tag-primary": "tag bg-lg-cyan-2 text-primary",
   },
 });
