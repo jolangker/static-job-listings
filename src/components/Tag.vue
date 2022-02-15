@@ -12,7 +12,7 @@
       class="bg-primary p-2 duration-300 hover:bg-vdg-cyan"
       @click="handleRemove"
     >
-      <img src="../assets/images/icon-remove.svg" />
+      <img src="../assets/images/icon-remove.svg" alt="Icon Remove" />
     </button>
   </div>
 </template>

@@ -6,8 +6,9 @@
     <img
       :src="job.logo"
       class="w-12 h-12 rounded-full bg-gray-500 -mt-10 lg:hidden"
+      :alt="`${job.company} logo`"
     />
-    <img :src="job.logo" class="<lg:hidden mr-6" />
+    <img :src="job.logo" class="<lg:hidden mr-6" :alt="`${job.company} logo`" />
     <div class="border-b-2 pb-3 lg:(border-0 p-0)">
       <div class="flex items-center py-3">
         <p class="text-primary font-bold mr-3">
